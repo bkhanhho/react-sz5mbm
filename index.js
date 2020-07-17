@@ -3,25 +3,24 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 
+
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       name: 'Buu Khanh'
     };
-  }
 
-  render() {
-    return (<div/>);
-    // return (
-    //   <div>
-    //     <Hello name={this.state.name} />
-    //     <p>
-    //       Start editing to see some magic happen :)
-    //     </p>
-    //   </div>
-    // );
   }
+   render() {
+    return (<div/>);
+   }
 }
 
 render(<App />, document.getElementById('root'));
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
